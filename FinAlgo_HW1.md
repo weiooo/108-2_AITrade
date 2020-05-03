@@ -36,14 +36,16 @@ def interpolate(T1,r1,T2,r2,t):
 class Optioninfo:
     
     def __init__(self, S, K, T, r, sigma, Type, pos, shares):
-        self.S = S
-        self.K = K
-        self.T = T
-        self.r = r
-        self.sigma = sigma
-        self.Type = Type
-        self.pos = pos
-        self.shares = shares
+        
+        self.S = S            # S     : stock price
+        self.K = K            # K     : strike price
+        self.T = T            # T     : time to maturity (year)
+        self.r = r            # r     : interest rate
+        self.sigma = sigma    # sigma : volatility of underlying asset
+        self.Type = Type      # Type  : 'c' for call; 'p' for put
+        self.pos = pos        # pos   : 'l' for long; 's' for short position
+        self.shares = shares  # shares: shares of underlying asset
+        
         
     # function for calculating delta, vega, gamma
     def delta(self):
