@@ -189,11 +189,13 @@ port_vega = (max(0, np.sum(v.T * v * corr)))**0.5
 # Curvature
 cvr_up = np.array(cvr_up_list)
 phi = (cvr_up < 0) * (np.roll(cvr_up, 1) < 0)
-Kb_up = (max(0, sum(np.square(np.maximum(cvr_up, 0)) + (rho_12**2) * cvr_up * np.roll(cvr_up, 1) * (phi != True).astype(int)))) ** 0.5
+Kb_up = (max(0, sum(np.square(np.maximum(cvr_up, 0)) + 
+        (rho_12**2) * cvr_up * np.roll(cvr_up, 1) * (phi != True).astype(int)))) ** 0.5
 
 cvr_down = np.array(cvr_down_list)
 phi = (cvr_down < 0) * (np.roll(cvr_down, 1) < 0)
-Kb_down = (max(0, sum(np.square(np.maximum(cvr_down, 0)) + (rho_12**2) * cvr_down * np.roll(cvr_down, 1) * (phi != True).astype(int)))) ** 0.5
+Kb_down = (max(0, sum(np.square(np.maximum(cvr_down, 0)) + 
+          (rho_12**2) * cvr_down * np.roll(cvr_down, 1) * (phi != True).astype(int)))) ** 0.5
 
 Kb = max(Kb_up, Kb_down)
 port_curv = (max(0, Kb**2))**0.5
