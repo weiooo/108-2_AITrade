@@ -1,4 +1,1 @@
-# 108-2_AITrade
-
-Hi!<br />
-Here is my lecture note of 'AI_Trade' class.<br />
+# 108-2 AITrade(NTUST) & FinAlgo(NTU)
