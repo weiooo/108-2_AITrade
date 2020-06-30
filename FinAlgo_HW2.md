@@ -85,11 +85,15 @@ def HestonProb(S0, V0, r, T, dt, rho, kappa, theta, sigma, rep):
 rep = 100000
 np.random.seed(seed=12345)
 prob_yes, prob_no, prob_continue = HestonProb(S0, V0, r, T, dt, rho, kappa, theta, sigma, rep)
-prob_yes
+print('prob_yes: ',prob_yes,
+     '\nprob_no: ',prob_no,
+     '\nprob_continue:', prob_continue)
 ```
 
 ```Python
-0.38704
+prob_yes:  0.38247 
+prob_no :  0.57166 
+prob_continue: 0.04587
 ```
 
 ### Calculate Fair Value with discount rate
