@@ -14,12 +14,12 @@ rf_6m = 0.35350 / 100
 T = 0.5
 
 # 把美元當外國貨幣; 日圓當作本國貨幣
-rd = math.log(forward/spot_6m*math.exp(rf_6m*T))/T
+rd = math.log(forward/spot_6m)/T+rf_6m
 rd
 ```
 
 ```Python
-0.0012726097688562329
+0.0012726097688561437
 ```
 
 ## Part I | Fair Value
